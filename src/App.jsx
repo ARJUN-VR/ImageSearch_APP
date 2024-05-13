@@ -1,5 +1,6 @@
 import  { useCallback, useRef, useState } from "react";
 import { toast } from "react-toastify";
+import Loader from "./Loader";
 
 
 function App() {
@@ -118,7 +119,9 @@ function App() {
 
       {/* Display slider */}
       {isPending ? (
-        <div>Loading...</div>
+        <div>
+          <Loader/>
+        </div>
       ) : (
         <div className="w-full p-10 h-auto ">
           <div className="w-full flex items-center justify-center flex-wrap space-x-4 space-y-2 overflow-y-auto  ">
